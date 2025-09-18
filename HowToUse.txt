@@ -1,0 +1,81 @@
+📦 How To Use — Eco-Friendly Discord AI Bot 🤖🌿
+
+This guide will walk you through setting up and running the Eco-Friendly Bot, a Discord bot that uses AI (ResNet) to recognize electronic devices and help raise environmental awareness.
+
+📁 Project Structure
+
+EcoFriendlyBOT/
+│
+├── Bot/                  # Contains bot-related files (like bot.py)
+├── datasets/             # Training images sorted by categories (e.g., smartphone, laptop)
+├── env/                  # Your virtual environment (not needed for users to upload)
+├── Labels/               # Contains 'labels.txt' mapping classes
+├── Resnet/               # Trained model file (resnet_model.pth)
+└── bot.py                # Main file to run the Discord bot
+
+✅ Prerequisites
+
+Make sure you have:
+
+1. Python 3.8+ installed
+
+2. A Discord bot token (create one at https://discord.com/developers)
+
+3. Git & pip installed
+
+🛠️ Setup Instructions
+1. 🔁 Clone the Repository
+git clone https://github.com/Gevonda108/Eco-Friendly-Bot.git
+cd Eco-Friendly-Bot
+
+🧪 Create & Activate a Virtual Environment (Optional but Recommended)
+# Create
+python -m venv env
+
+# Activate
+# On Windows:
+env\Scripts\activate
+
+# On macOS/Linux:
+source env/bin/activate
+
+📦 Install Dependencies
+pip install -r requirements.txt
+
+pip install discord.py torch torchvision pillow
+
+client.run("YOUR_DISCORD_BOT_TOKEN")
+
+🧠 Ensure Model & Dataset Are in Place
+
+* Resnet/resnet_model.pth: This is your trained model file.
+
+* datasets/: Must contain folders for each class (e.g., smartphone, tv, etc.) — these are used if you retrain or augment the model.
+
+* Labels/labels.txt: A text file listing all the class labels.
+
+* Make sure all these exist in the proper folders before running the bot.
+
+python bot.py
+
+📎 Notes
+
+* If you want to retrain the ResNet model, make sure to:
+  * Use the datasets/ folder for image categories.
+  * Export the model to Resnet/resnet_model.pth.
+* This bot uses basic computer vision to identify devices from images users upload in Discord.
+
+This bot uses basic computer vision to identify devices from images users upload in Discord.
+
+🧼 Troubleshooting
+
+* Missing torch or discord module?
+  Run pip install torch torchvision discord.py
+
+* Model not found error?
+  Ensure resnet_model.pth is in the Resnet/ directory.
+
+* Bot not starting?
+  Double-check your Discord bot token in bot.py.
+
+Made with 💚 to promote awareness around e-waste.
