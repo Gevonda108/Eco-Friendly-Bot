@@ -8,9 +8,10 @@ This bot is the most updated one and yet the most exquisite one out here, and lo
 * User-Friendly
 * An alert that alarms the user if they use excessive amount of plastic or energy.
 * Compliments the user if the amount of energy is used at a normal amount or less.
+* Uses The Best AI detection: Resnet & PyTorch
 
 ## Technology
-* Tensorflow & teachable machine
+* Resnet & PyTorch
 * Discord.py
 * External API
 * Updated
